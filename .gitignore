@@ -1,0 +1,5 @@
+#Java bytecode
+*.class
+
+# IDEA config files
+.idea/
