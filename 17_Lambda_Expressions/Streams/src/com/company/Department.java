@@ -1,0 +1,31 @@
+/*
+ *  ==========================================================
+ *  Author 	      :      AFGHAN (Piotr Skalski)
+ *  Website       :      https://github.com/SkalskiP
+ *  Date          :      24.02.18 21:12
+ *  Project       :      Streams
+ *  ==========================================================
+ */
+
+package com.company;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Department {
+    private String name;
+    private List<Employee> employees;
+
+    public Department(String name) {
+        this.name = name;
+        this.employees = new ArrayList<>();
+    }
+
+    public void addEmployee(Employee employee) {
+        this.employees.add(employee);
+    }
+
+    public List<Employee> getEmployees() {
+        return this.employees;
+    }
+}
