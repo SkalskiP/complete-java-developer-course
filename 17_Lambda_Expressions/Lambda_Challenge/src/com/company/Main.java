@@ -9,6 +9,9 @@
 
 package com.company;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -80,6 +83,48 @@ public class Main {
 
         String supplierResult = iLoveJava.get();
         System.out.println(supplierResult);
+
+        // ---------------------------------------------------------
+        // Challenge 10
+        // ---------------------------------------------------------
+
+        List<String> topNames2015 = Arrays.asList(
+                "Amelia",
+                "Olivia",
+                "emily",
+                "Isla",
+                "Ava",
+                "oliver",
+                "Jack",
+                "Charlie",
+                "harry",
+                "Jacob");
+
+        List<String> firstUpperCaseList = new ArrayList<>();
+        topNames2015.forEach(name -> {
+            firstUpperCaseList.add(name.substring(0, 1).toUpperCase() + name.substring(1));
+        });
+        firstUpperCaseList.sort(String::compareTo);
+        firstUpperCaseList.forEach(System.out::println);
+
+        // ---------------------------------------------------------
+        // Challenge 11
+        // ---------------------------------------------------------
+
+        topNames2015.stream()
+                .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
+                .sorted(String::compareTo)
+                .forEach(System.out::println);
+
+        // ---------------------------------------------------------
+        // Challenge 12
+        // ---------------------------------------------------------
+
+        long numberOfANames =  topNames2015.stream()
+                .map(s -> s.toUpperCase())
+                .filter(s -> s.startsWith("A"))
+                .count();
+        System.out.println(numberOfANames);
     }
 
     // ---------------------------------------------------------
