@@ -14,7 +14,7 @@ public class StringUtilities {
     private int charAdded = 0;
 
     public void addChar(StringBuilder sBuilder, char c) {
-        this.sBuilder.append(c);
+        sBuilder.append(c);
         charAdded ++;
     }
 }
