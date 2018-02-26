@@ -37,7 +37,7 @@ public class Utilities {
     public String removePairs(String source) {
 
         // If length is less than 2, there won't be any pair
-        if (source.length() < 2) {
+        if (source == null || source.length() < 2) {
             return source;
         }
         StringBuilder sb = new StringBuilder();
